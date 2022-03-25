@@ -124,7 +124,7 @@ func (s *Server) handleMovies() http.HandlerFunc {
 	}
 
 	movies := []Movie{}
-	rows, err := s.Db.Query("SELECT title, rating FROM movies")
+	rows, err := s.Db.Query("SELECT title, rating FROM movies;")
 	if err != nil {
 		log.Fatal(err)
 	}
